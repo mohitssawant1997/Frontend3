@@ -1,0 +1,30 @@
+<div class="container">
+    <div>
+        <form (ngSubmit)="viewbooking()">
+            <div>
+                <label for="">Please Enter Your Customer Id: </label>
+            
+                <input type="text" name="t3" [(ngModel)]="customer.cust_Id" class="form-control">
+              </div>
+              <div>
+                <br/> 
+                    <input type="submit" value="Submit" class="btn btn-success">
+                  </div>
+        </form>
+    </div>
+
+</div><br><br>
+<div  class="jumbotron jumbotron-fluid text-center" >
+<div *ngFor="let item of arr">
+ <div *ngIf="item[5]">
+  Your Booking Id is: {{item[0]}}<br>
+  Your Total Seats are:{{item[1]}}<br>
+  Your Total Fare:{{item[3]}}<br>
+  Your Date of booking:{{item[4]}}
+    </div>
+
+  <div *ngIf="showMsg">
+  {{message}}
+  </div> -->
+  </div>
+</div>
