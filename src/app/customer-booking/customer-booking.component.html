@@ -2,29 +2,35 @@
     <div>
         <form (ngSubmit)="viewbooking()">
             <div>
-                <label for="">Please Enter Your Customer Id: </label>
+                
             
-                <input type="text" name="t3" [(ngModel)]="customer.cust_Id" class="form-control">
+                <input type="text" name="t3" [(ngModel)]="customer.cust_Id" class="form-control" placeholder="Confirm Your Customer Id">
               </div>
               <div>
                 <br/> 
-                    <input type="submit" value="Submit" class="btn btn-success">
+                    <input type="submit" value="Submit" class="btn btn-large btn-primary">
                   </div>
         </form>
     </div>
 
 </div><br><br>
-<div  class="jumbotron jumbotron-fluid text-center" >
+<div   >
 <div *ngFor="let item of arr">
- <div *ngIf="item[5]">
-  Your Booking Id is: {{item[0]}}<br>
-  Your Total Seats are:{{item[1]}}<br>
-  Your Total Fare:{{item[3]}}<br>
-  Your Date of booking:{{item[4]}}
-    </div>
+ <!-- <div *ngIf="item[5]" class="jumbotron jumbotron-fluid text-center" class="style"> -->
+<div class="jumbotron jumbotron-fluid text-center" class="style">
+   Booking Id : {{item[0]}}<br><br>
+   Total Seats :{{item[1]}}<br><br>
+   Total Fare:{{item[2]}}<br><br>
+   Date of Booking:{{item[3]}}<br><br>
+   Booking Status:{{item[4]}}
+
+</div>
+  
+ 
+  <!-- </div> -->
 
   <div *ngIf="showMsg">
   {{message}}
-  </div> -->
+  </div> 
   </div>
 </div>

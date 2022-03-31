@@ -8,7 +8,7 @@ import { Customer } from '../customer';
   styleUrls: ['./customer-booking.component.css']
 })
 export class CustomerBookingComponent implements OnInit {
-  arr:any[] | undefined;
+  arr:any=0 ;
   showMsg:boolean=false;
   showBooking:boolean=false;
   bookingId: number=0;
@@ -16,6 +16,8 @@ export class CustomerBookingComponent implements OnInit {
   numberofseats: number=0;
   totalfare!: DoubleRange;
   dateofbooking!:Date;
+ 
+
   constructor(private service:BookingService) { }
   customer:Customer=new Customer();
 
@@ -26,22 +28,24 @@ export class CustomerBookingComponent implements OnInit {
     this.service.booking(this.customer).subscribe(
       result=>{
        this.arr=result;
-for(const res of result){
-         if(res[5]==true){
-        this.showBooking=true;
-        this.bookingId=res[0];
-        this.numberofseats=res[1];
-        this.totalfare=res[3];
-        this.dateofbooking=res[4];
-         }
-         else{
+      // for(const res of result){
+      //    if(res[5]==true){
+      //   this.showBooking=true;
+      //   this.bookingId=res[0];
+      //   this.numberofseats=res[1];
+      //   this.totalfare=res[3];
+      //   this.dateofbooking=res[4];
+       
+  
+      //    }
+      //    else{
         
-        this.showMsg=true;
-        this.message=res.messageIfAny;
+      //   this.showMsg=true;
+      //   this.message=res.messageIfAny;
                
       }
-    }
-     }
+    //}
+    // }
 
     )
 

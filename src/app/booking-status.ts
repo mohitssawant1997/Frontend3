@@ -6,4 +6,6 @@ export class BookingStatus {
 	public numberOfSeats!:number
 	public  totalFare!:DoubleRange
 	public dateofbooking!:Date
+	public bookingstatus!:boolean
+	
 }
